@@ -87,7 +87,11 @@ it("hides arrows on first and last picture", function() {
   expect(queryByAltText("Photo by Richard Pasquarella on Unsplash")).toBeInTheDocument();
   expect(queryByAltText("Photo by Pratik Patel on Unsplash")).not.toBeInTheDocument();
 
-
+  fireEvent.click(rightArrow);
+  fireEvent.click(rightArrow);
+ 
+  
+  expect(queryByTestId("right-arrow")).not.toBeInTheDocument();
 
 
 });
